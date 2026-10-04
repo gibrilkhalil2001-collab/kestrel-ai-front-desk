@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  run-notebook:
+    name: Execute notebook offline
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install numpy matplotlib nbconvert nbformat ipykernel
+
+      - name: Run notebook top to bottom (no API key, offline provider)
+        env:
+          MPLBACKEND: Agg
+        run: >
+          python -m nbconvert --to notebook --execute
+          --ExecutePreprocessor.timeout=300
+          --output /tmp/executed.ipynb
+          agentic_front_desk.ipynb
