@@ -2,6 +2,8 @@
 
 # Kestrel: An Agentic AI Front Desk for Service Businesses
 
+![Kestrel evaluation summary](docs/evaluation.svg)
+
 Multi channel conversational agent that answers enquiries on web chat, WhatsApp, voice transcripts
 and email, qualifies the lead against a rubric the business agrees with, checks real availability,
 books a real slot, writes it to a real CRM, and hands over to a person the moment it reaches
