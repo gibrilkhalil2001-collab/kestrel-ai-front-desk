@@ -1,3 +1,5 @@
+[![CI](https://github.com/gibrilkhalil2001-collab/kestrel-ai-front-desk/actions/workflows/ci.yml/badge.svg)](https://github.com/gibrilkhalil2001-collab/kestrel-ai-front-desk/actions/workflows/ci.yml)
+
 # Kestrel: An Agentic AI Front Desk for Service Businesses
 
 Multi channel conversational agent that answers enquiries on web chat, WhatsApp, voice transcripts
